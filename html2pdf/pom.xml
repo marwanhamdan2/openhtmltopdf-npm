@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mashvisor.app</groupId>
+  <artifactId>html2pdf</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>html2pdf</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+        <!-- ALWAYS required. -->
+        <groupId>com.openhtmltopdf</groupId>
+        <artifactId>openhtmltopdf-core</artifactId>
+        <version>0.0.1-RC10</version>
+    </dependency>
+    <dependency>
+        <!-- Required for PDF output. -->
+        <groupId>com.openhtmltopdf</groupId>
+        <artifactId>openhtmltopdf-pdfbox</artifactId>
+        <version>0.0.1-RC10</version>
+    </dependency>
+    <dependency>
+        <!-- Required for image output only. -->
+        <groupId>com.openhtmltopdf</groupId>
+        <artifactId>openhtmltopdf-java2d</artifactId>
+        <version>0.0.1-RC10</version>
+    </dependency>
+    <dependency>
+        <!-- Optional, leave out if you do not need right-to-left or bi-directional text support. -->
+        <groupId>com.openhtmltopdf</groupId>
+        <artifactId>openhtmltopdf-rtl-support</artifactId>
+        <version>0.0.1-RC10</version>
+    </dependency>
+    <dependency>
+        <!-- Optional, leave out if you do not need HTML5 parsing support. -->
+        <groupId>com.openhtmltopdf</groupId>
+        <artifactId>openhtmltopdf-jsoup-dom-converter</artifactId>
+        <version>0.0.1-RC10</version>
+    </dependency>
+    <dependency>
+        <!-- Optional, leave out if you do not need logging via slf4j. -->
+        <groupId>com.openhtmltopdf</groupId>
+        <artifactId>openhtmltopdf-slf4j</artifactId>
+        <version>0.0.1-RC10</version>
+    </dependency>
+    <dependency>
+        <!-- Optional, leave out if you do not need logging via log4j. -->
+        <groupId>com.openhtmltopdf</groupId>
+        <artifactId>openhtmltopdf-log4j</artifactId>
+        <version>0.0.1-RC10</version>
+    </dependency>
+      <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>21.0</version>
+      </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.mashvisor.app.App</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

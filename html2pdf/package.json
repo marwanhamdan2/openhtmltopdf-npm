@@ -1,0 +1,14 @@
+{
+  "name": "html2pdf",
+  "version": "1.0.0",
+  "description": "mvn clean compile assembly:single",
+  "main": "index.js",
+  "scripts": {
+    "build-java-app": "mvn clean compile assembly:single && mv ./target/html2pdf-1.0-SNAPSHOT-jar-with-dependencies.jar ./dist/app.jar && mvn clean"
+  },
+  "author": "Marwan Hamdan <marwan@mashvisor.com>",
+  "license": "MIT",
+  "dependencies": {
+    "uuid-v4": "^0.1.0"
+  }
+}
