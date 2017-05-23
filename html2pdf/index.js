@@ -28,5 +28,9 @@ module.exports = {
                 });
             })
         });
+    },
+
+    getFontsPath: function(){
+        return `${__dirname}/dist/fonts`;
     }
 }
