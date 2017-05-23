@@ -3,10 +3,14 @@ const fs = require('fs');
 const exec = require('child_process').exec;
 
 module.exports = {
-    generatePdfOfHtml: function(htmlData){
+    generatePdfOfHtml: function(htmlData, id){
+        if(!id){
+            var id = uuid();
+        }
+
         return new Promise((resolve, reject)=>{
             //generate random file name
-            var filePath = `./dist/${uuid()}`;
+            var filePath = `./dist/${id}`;
             //write html data as file to disk
             fs.writeFile(filePath + '.html', htmlData, (err)=>{
                 if(err){
