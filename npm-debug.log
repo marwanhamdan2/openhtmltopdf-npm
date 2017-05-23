@@ -1,0 +1,107 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.9
+3 info using node@v6.9.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/user/Desktop/cs/Projects/java/maven/openHtml',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/user/.npm/html2pdf-node/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/user/.npm correctMkdir not in flight; initializing
+10 info lifecycle html2pdf-node@1.0.0~prepublish: html2pdf-node@1.0.0
+11 silly lifecycle html2pdf-node@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/user/.npm/html2pdf-node/1.0.0/package.tgz',
+12 verbose tar pack   '/Users/user/Desktop/cs/Projects/java/maven/openHtml' ]
+13 verbose tarball /Users/user/.npm/html2pdf-node/1.0.0/package.tgz
+14 verbose folder /Users/user/Desktop/cs/Projects/java/maven/openHtml
+15 verbose addLocalTarball adding from inside cache /Users/user/.npm/html2pdf-node/1.0.0/package.tgz
+16 verbose correctMkdir /Users/user/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd html2pdf-node@1.0.0
+18 verbose afterAdd /Users/user/.npm/html2pdf-node/1.0.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/user/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/user/.npm/html2pdf-node/1.0.0/package/package.json written
+21 silly publish { name: 'html2pdf-node',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'mvn clean compile assembly:single',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { 'build-java-app': 'mvn clean compile assembly:single && mv ./target/html2pdf-1.0-SNAPSHOT-jar-with-dependencies.jar ./dist/app.jar && mvn clean' },
+21 silly publish   author: { name: 'Marwan Hamdan', email: 'marwan@mashvisor.com' },
+21 silly publish   license: 'MIT',
+21 silly publish   dependencies: { 'uuid-v4': '^0.1.0' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/marwanhamdan2/openhtmltopdf-npm.git' },
+21 silly publish   readme: '##BUILD THE JAVA APP\n\nmvn clean compile assembly:single\n\n\njar file will be located into target dir\n\n\nmove to dist dir\n\n\n##Run the JAVA APP\njava -jar app.jar input_file_path output_file_path\n\n\n\n###node module export\n\nIt exports object of the following functions:\n\n1) generatePdfOfHtml(htmlData) : Promise<String>\n    resolve pdfFilePath and Reject error\n\n\n\n###npm build the java app\n\nnpm run build-java-app\n\n',
+21 silly publish   readmeFilename: 'README.MD',
+21 silly publish   gitHead: '16ad8f3b6601d9d2a41641cb50d7877d3d3a3a30',
+21 silly publish   bugs: { url: 'https://github.com/marwanhamdan2/openhtmltopdf-npm/issues' },
+21 silly publish   homepage: 'https://github.com/marwanhamdan2/openhtmltopdf-npm#readme',
+21 silly publish   _id: 'html2pdf-node@1.0.0',
+21 silly publish   _shasum: 'e05b9f7372831d7f7de2b6d820c472d82a52438e',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name html2pdf-node
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'html2pdf-node',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'html2pdf-node',
+26 silly mapToRegistry   name: 'html2pdf-node',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/html2pdf-node
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/user/.npm/html2pdf-node/1.0.0/package.tgz
+30 verbose request uri https://registry.npmjs.org/html2pdf-node
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 5:53:42 PM
+33 verbose request using bearer token for auth
+34 verbose request id d365849595bfe627
+35 http request PUT https://registry.npmjs.org/html2pdf-node
+36 http 403 https://registry.npmjs.org/html2pdf-node
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Tue, 23 May 2017 14:54:40 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-fra1236-FRA',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1495551223.358187,VS0,VE57052',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/user/.npm/registry.npmjs.org/html2pdf-node on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : html2pdf-node
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid html2pdf-node
+43 verbose cwd /Users/user/Desktop/cs/Projects/java/maven/openHtml
+44 error Darwin 16.0.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.9.2
+47 error npm  v3.10.9
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.0." : html2pdf-node
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
