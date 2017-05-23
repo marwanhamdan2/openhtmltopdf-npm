@@ -21,3 +21,9 @@ It exports object of the following functions:
 1) generatePdfOfHtml(htmlData) : Promise<String>
     resolve pdfFilePath and Reject error
 
+
+
+###npm build the java app
+
+npm run build-java-app
+
