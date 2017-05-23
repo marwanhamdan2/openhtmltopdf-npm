@@ -1,5 +1,5 @@
 {
-  "name": "html2pdf",
+  "name": "html2pdf-node",
   "version": "1.0.0",
   "description": "mvn clean compile assembly:single",
   "main": "index.js",
@@ -10,5 +10,10 @@
   "license": "MIT",
   "dependencies": {
     "uuid-v4": "^0.1.0"
-  }
+  },
+  "repository" :
+    {
+      "type" : "git",
+      "url" : "https://github.com/marwanhamdan2/openhtmltopdf-npm"
+    }
 }
