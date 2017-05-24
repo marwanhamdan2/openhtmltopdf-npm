@@ -1,29 +1,29 @@
-##BUILD THE JAVA APP
-
-mvn clean compile assembly:single
+**This is a node interface to openhtmltopdf (https://github.com/danfickle/openhtmltopdf) It requires JRE to be installed.**
 
 
-jar file will be located into target dir
+#How to use
+
+npm install html2pdf-node
 
 
-move to dist dir
+```javascript
+const html2pdf = require("html2pdf-node");
+const htmlSample = `<p>Hello</p>`;
+html2pdf.generatePdfOfHtml(htmlSample)
+        .then(pdfFilePath=>{
+            console.log(pdfFilePath)
+        })
+        .catch(err=>{});
+```
 
 
-##Run the JAVA APP
+
+#NOTES
+
+This module contains java archive file (jar) with needed dependencies
+Ready to be used, you need JRE installed.
+
+You can update the java code and build with **npm run build-java-app**
+
+###Run the JAVA APP
 java -jar app.jar input_file_path output_file_path
-
-
-
-###node module export
-
-It exports object of the following functions:
-
-1) generatePdfOfHtml(htmlData) : Promise<String>
-    resolve pdfFilePath and Reject error
-
-
-
-###npm build the java app
-
-npm run build-java-app
-
