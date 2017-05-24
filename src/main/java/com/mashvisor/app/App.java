@@ -1,18 +1,11 @@
 package com.mashvisor.app;
-
 import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
-
 import java.io.*;
 import java.util.UUID;
-
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
