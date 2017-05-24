@@ -26,4 +26,4 @@ Ready to be used, you need JRE installed.
 You can update the java code and build with **npm run build-java-app**
 
 ### Run the JAVA APP
-java -jar app.jar input_file_path output_file_path
+java -jar app.jar input_html_file_path output_pdf_file_path
