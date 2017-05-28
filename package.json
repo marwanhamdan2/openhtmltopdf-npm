@@ -1,6 +1,6 @@
 {
   "name": "html2pdf-node",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "mvn clean compile assembly:single",
   "main": "index.js",
   "scripts": {

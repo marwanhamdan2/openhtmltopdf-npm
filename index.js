@@ -10,25 +10,27 @@ module.exports = {
 
         return new Promise((resolve, reject)=>{
             //generate random file name
-            var filePath = `./dist/${id}`;
+            var srcFilePath = __dirname + `/dist/${id}.html`;
+            var dstFilePath = __dirname + `/dist/${id}.pdf`;
+            var javaAppPath = __dirname + '/dist/app.jar';
             //write html data as file to disk
-            fs.writeFile(filePath + '.html', htmlData, (err)=>{
+            fs.writeFile(srcFilePath, htmlData, (err)=>{
                 if(err){
                     return reject(err);
                 }
 
                 //if file is written successfully convert into pdf
-                const cmd = `java -jar ./dist/app.jar ${filePath+'.html'} ${filePath + '.pdf'}`
+                const cmd = `java -jar ${javaAppPath} ${srcFilePath} ${dstFilePath}`
                 exec(cmd, function(error, stdout, stderr) {
                     if(error){
                         return reject(error);
                     }
 
                     //delete html file
-                    fs.unlink(filePath + '.html');
+                    fs.unlink(srcFilePath);
 
                     //resolve the output pdf file
-                    return resolve(__dirname + `/${filePath + '.pdf'}`);
+                    return resolve(dstFilePath);
                 });
             })
         });
