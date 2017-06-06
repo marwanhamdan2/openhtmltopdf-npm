@@ -2,8 +2,12 @@ package com.mashvisor.app;
 import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
 import java.io.*;
 import java.util.UUID;
-import com.google.common.base.Charsets;
-import com.google.common.io.Files;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 
 
 public class App 
@@ -45,9 +49,18 @@ public class App
         /**
          * Read input file data
          */
-        String inputHtmlData = null;
+        String inputHtmlData = "";
         try{
-            inputHtmlData = Files.toString(f, Charsets.UTF_8);
+            BufferedReader in = new BufferedReader(
+            new InputStreamReader(
+                        new FileInputStream(inputFilePath), "UTF8"));
+                
+            
+            String str;
+		    while ((str = in.readLine()) != null) {
+		        inputHtmlData+=str;
+		    }
+            in.close();
         }catch(IOException E){
             System.err.println(E.toString());
             System.exit(1);
